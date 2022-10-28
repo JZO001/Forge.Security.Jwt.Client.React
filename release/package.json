@@ -1,0 +1,57 @@
+{
+  "name": "forge-security-jwt-client-web",
+  "version": "1.0.0",
+  "description": "Client side typescript authentication",
+  "author": "Zoltan Juhasz",
+  "license": "MIT",
+  "keywords": [
+    "jzo",
+    "react",
+    "jwt",
+    "security",
+    "forge",
+    "client",
+    "web"
+  ],
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
+  "dependencies": {
+    "jzo-library": "1.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JZO001/Forge.Security.Jwt.Client.Web"
+  },
+  "scripts": {
+    "build": "rimraf ./build && webpack --config webpack.config.js",
+    "debug": "rimraf ./build && webpack --config webpack.dev-config.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/react": "^17.0.0",
+    "babel-loader": "^8.2.5",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "last 2 versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
