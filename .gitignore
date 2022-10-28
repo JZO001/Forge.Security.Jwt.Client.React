@@ -6,4 +6,5 @@
 /dev/build
 /dev/package-lock.json
 /release/node_modules
+/release/build
 /release/package-lock.json

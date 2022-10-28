@@ -8,7 +8,7 @@ class NotAuthorized extends React.Component<{ children?: JSX.Element }> {
         return (
             <AuthenticationContext.Consumer>
                 {
-                    authContext => <NotAuthorizedInternal authContext={authContext} {...this.props} />
+                    (authContext: AuthnticationContextData) => <NotAuthorizedInternal authContext={authContext} {...this.props} />
                 }
             </AuthenticationContext.Consumer>
         );

@@ -27,7 +27,6 @@ class AuthorizeView extends React.Component<{ children?: JSX.Element }, Authoriz
     }
 
     render() {
-        //(async () => parsedTokenData = await ServiceStore.authenticationService.getCurrentUserInfoAsync())();
         return (
             <AuthenticationContext.Provider value={{
                 isAuthenticated: this.state.isAuthenticated

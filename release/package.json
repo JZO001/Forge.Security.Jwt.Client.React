@@ -1,8 +1,10 @@
 {
   "name": "forge-security-jwt-client-web",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Client side typescript authentication",
   "author": "Zoltan Juhasz",
+  "main": "./build/bundle.js",
+  "types": "./build/index.d.ts",
   "license": "MIT",
   "keywords": [
     "jzo",
@@ -13,11 +15,10 @@
     "client",
     "web"
   ],
-  "peerDependencies": {
-    "react": "^17.0.0"
-  },
+  "peerDependencies": {},
   "dependencies": {
-    "jzo-library": "1.0.6"
+    "jzo-library": "1.0.6",
+    "react": "^17.0.0"
   },
   "repository": {
     "type": "git",
