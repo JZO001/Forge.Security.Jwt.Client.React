@@ -1,6 +1,6 @@
 {
   "name": "forge-security-jwt-client-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Client side typescript authentication",
   "author": "Zoltan Juhasz",
   "main": "./build/bundle.js",

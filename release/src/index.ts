@@ -1,3 +1,5 @@
+export { Configuration } from "./configuration/Configuration";
+
 export { AuthenticationStateChangedEventArgs } from "./data/AuthenticationStateChangedEventArgs";
 export { ClaimsIdentity } from "./data/ClaimsIdentity";
 export { ClaimTypes } from "./data/ClaimTypes";
