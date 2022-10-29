@@ -1,7 +1,7 @@
 {
   "name": "forge-security-jwt-client-web",
-  "version": "1.0.3",
-  "description": "Client side typescript authentication",
+  "version": "1.0.4",
+  "description": "Client side JWT authentication",
   "author": "Zoltan Juhasz",
   "main": "./build/bundle.js",
   "types": "./build/index.d.ts",
