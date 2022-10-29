@@ -84,6 +84,9 @@ Finally, the additional services need to configured:
 Configuration.configureServices();
 ``` 
 
+For a complete working example, please visit my Forge.Yoda repository: https://github.com/JZO001/Forge.Yoda
+The solution conatins a project, called 'Forge.Yoda.Apps.Web.React'. Please feel free to check, how it is configured and used.
+
 
 Please also check the following projects in my repositories:
 - Forge.Yoda
