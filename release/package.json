@@ -1,6 +1,6 @@
 {
   "name": "forge-security-jwt-client-web",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Client side JWT authentication",
   "author": "Zoltan Juhasz",
   "main": "./build/bundle.js",
@@ -8,7 +8,6 @@
   "license": "MIT",
   "keywords": [
     "jzo",
-    "react",
     "jwt",
     "security",
     "forge",
@@ -17,8 +16,7 @@
   ],
   "peerDependencies": {},
   "dependencies": {
-    "jzo-library": "1.0.6",
-    "react": "^17.0.0"
+    "jzo-library": "^1.0.6"
   },
   "repository": {
     "type": "git",

@@ -76,5 +76,8 @@ module.exports = {
         }
       })
     ]
+  },
+  externals: {
+    'jzo-library': 'jzo-library'
   }
 }

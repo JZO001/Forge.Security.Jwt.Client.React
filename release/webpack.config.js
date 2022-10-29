@@ -15,7 +15,7 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
     library: {
-        name: 'forge-security-jwt-client-web',
+      name: 'forge-security-jwt-client-web',
       type: 'umd'
     }
   },
@@ -76,5 +76,8 @@ module.exports = {
         }
       })
     ]
+  },
+  externals: {
+    'jzo-library': 'jzo-library'
   }
 }
