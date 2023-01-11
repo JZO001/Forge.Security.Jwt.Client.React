@@ -1,7 +1,7 @@
 import { ParsedTokenData } from "../data/types";
-import { IStorage } from "../interfaces/IStorage";
+import { ILocalStorage } from "../interfaces/ILocalStorage";
 
-export class LocalStorage implements IStorage {
+export class LocalStorage implements ILocalStorage {
 
     public containsKey(key: string): boolean {
         return localStorage.hasOwnProperty(key);

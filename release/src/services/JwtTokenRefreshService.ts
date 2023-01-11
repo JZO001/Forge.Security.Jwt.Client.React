@@ -2,20 +2,21 @@ import { ArgumentNullException } from "jzo-library";
 import { AuthenticationStateChangedEventArgs } from "../data/AuthenticationStateChangedEventArgs";
 import { ParsedTokenData } from "../data/types";
 import { IAuthenticationService } from "../interfaces/IAuthenticationService";
+import { IJwtTokenAuthenticationStateProvider } from "../interfaces/IJwtTokenAuthenticationStateProvider";
+import { IJwtTokenRefreshService } from "../interfaces/IJwtTokenRefreshService";
 import { JwtClientAuthenticationCoreOptions } from "../options/JwtClientAuthenticationCoreOptions";
-import { JwtTokenAuthenticationStateProvider } from "./JwtTokenAuthenticationStateProvider";
 
-export class JwtTokenRefreshService {
+export class JwtTokenRefreshService implements IJwtTokenRefreshService {
 
     private _authenticationService: IAuthenticationService;
-    private _authenticationStateProvider: JwtTokenAuthenticationStateProvider;
+    private _authenticationStateProvider: IJwtTokenAuthenticationStateProvider;
     private _options: JwtClientAuthenticationCoreOptions;
     private _parsedTokenData: ParsedTokenData;
 
     private _timeoutId: number = -1;
 
     constructor(authenticationService: IAuthenticationService,
-        authenticationStateProvider: JwtTokenAuthenticationStateProvider,
+        authenticationStateProvider: IJwtTokenAuthenticationStateProvider,
         options: JwtClientAuthenticationCoreOptions) {
         if (authenticationService === null) throw new ArgumentNullException("authenticationService");
         if (authenticationStateProvider === null) throw new ArgumentNullException("authenticationStateProvider");

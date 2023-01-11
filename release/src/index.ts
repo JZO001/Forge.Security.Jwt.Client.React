@@ -10,7 +10,13 @@ export { UserDataEventArgs } from "./data/UserDataEventArgs";
 
 export type { IAdditionalData } from "./interfaces/IAdditionalData";
 export type { IAuthenticationService } from "./interfaces/IAuthenticationService";
+export type { IJwtTokenAuthenticationStateProvider } from "./interfaces/IJwtTokenAuthenticationStateProvider";
+export type { IJwtTokenRefreshService } from "./interfaces/IJwtTokenRefreshService";
+export type { ILocalStorage } from "./interfaces/ILocalStorage";
+export type { IMemoryStorage } from "./interfaces/IMemoryStorage";
+export type { ISessionStorage } from "./interfaces/ISessionStorage";
 export type { IStorage } from "./interfaces/IStorage";
+export type { ITokenizedApiCommunicationService } from "./interfaces/ITokenizedApiCommunicationService";
 
 export { JwtClientAuthenticationCoreOptions } from "./options/JwtClientAuthenticationCoreOptions";
 export { Options } from "./options/Options";

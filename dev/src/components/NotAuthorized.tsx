@@ -1,5 +1,5 @@
 import * as React from "react";
-import AuthenticationContext, { AuthnticationContextData } from "./AuthenticationContext";
+import AuthenticationContext, { AuthenticationContextData } from "./AuthenticationContext";
 
 class NotAuthorized extends React.Component<{ children?: JSX.Element }> {
     static displayName = NotAuthorized.name;
@@ -8,7 +8,7 @@ class NotAuthorized extends React.Component<{ children?: JSX.Element }> {
         return (
             <AuthenticationContext.Consumer>
                 {
-                    (authContext: AuthnticationContextData) => <NotAuthorizedInternal authContext={authContext} {...this.props} />
+                    (authContext: AuthenticationContextData) => <NotAuthorizedInternal authContext={authContext} {...this.props} />
                 }
             </AuthenticationContext.Consumer>
         );
@@ -20,7 +20,7 @@ export default NotAuthorized;
 
 type NotAuthorizedInternalProps = {
     children?: JSX.Element;
-    authContext: AuthnticationContextData;
+    authContext: AuthenticationContextData;
 }
 
 class NotAuthorizedInternal extends React.Component<NotAuthorizedInternalProps> {

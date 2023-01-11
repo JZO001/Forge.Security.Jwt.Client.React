@@ -1,8 +1,9 @@
 import { ArgumentNullException } from "jzo-library";
 import { HttpRequestException } from "../data/HttpRequestException";
+import { ITokenizedApiCommunicationService } from "../interfaces/ITokenizedApiCommunicationService";
 import { TokenizedApiCommunicationServiceOptions } from "../options/TokenizedApiCommunicationServiceOptions";
 
-export class TokenizedApiCommunicationService {
+export class TokenizedApiCommunicationService implements ITokenizedApiCommunicationService {
 
     accessToken: string = "";
 

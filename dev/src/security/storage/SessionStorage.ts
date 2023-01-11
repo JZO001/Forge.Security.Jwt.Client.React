@@ -1,7 +1,7 @@
 import { ParsedTokenData } from "../data/types";
-import { IStorage } from "../interfaces/IStorage";
+import { ISessionStorage } from "../interfaces/ISessionStorage";
 
-export class SessionStorage implements IStorage {
+export class SessionStorage implements ISessionStorage {
 
     public containsKey(key: string): boolean {
         return sessionStorage.hasOwnProperty(key);

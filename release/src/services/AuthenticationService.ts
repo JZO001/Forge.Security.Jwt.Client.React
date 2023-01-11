@@ -7,21 +7,21 @@ import { AuthenticationResponse, BooleanResponse, JwtTokenResult, ParsedTokenDat
 import { UserDataEventArgs } from "../data/UserDataEventArgs";
 import { IAdditionalData } from "../interfaces/IAdditionalData";
 import { IAuthenticationService } from "../interfaces/IAuthenticationService";
+import { IJwtTokenAuthenticationStateProvider } from "../interfaces/IJwtTokenAuthenticationStateProvider";
+import { ITokenizedApiCommunicationService } from "../interfaces/ITokenizedApiCommunicationService";
 import { JwtClientAuthenticationCoreOptions } from "../options/JwtClientAuthenticationCoreOptions";
-import { JwtTokenAuthenticationStateProvider } from "./JwtTokenAuthenticationStateProvider";
-import { TokenizedApiCommunicationService } from "./TokenizedApiCommunicationService";
 
 export class AuthenticationService implements IAuthenticationService {
 
-    private readonly _apiService: TokenizedApiCommunicationService;
-    private readonly _authenticationStateProvider: JwtTokenAuthenticationStateProvider;
+    private readonly _apiService: ITokenizedApiCommunicationService;
+    private readonly _authenticationStateProvider: IJwtTokenAuthenticationStateProvider;
     private readonly _additionalData: IAdditionalData;
     private readonly _options: JwtClientAuthenticationCoreOptions;
 
     public readonly onUserAuthenticationStateChanged: GenericEvent<UserDataEventArgs> = new GenericEvent<UserDataEventArgs>();
 
-    constructor(apiService: TokenizedApiCommunicationService,
-        authenticationStateProvider: JwtTokenAuthenticationStateProvider,
+    constructor(apiService: ITokenizedApiCommunicationService,
+        authenticationStateProvider: IJwtTokenAuthenticationStateProvider,
         additionalData: IAdditionalData,
         options: JwtClientAuthenticationCoreOptions) {
         if (apiService === null) throw new ArgumentNullException("apiService");

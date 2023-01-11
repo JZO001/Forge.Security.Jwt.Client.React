@@ -5,17 +5,18 @@ import { ClaimTypes } from "../data/ClaimTypes";
 import { SecurityTokenException } from "../data/SecurityTokenException";
 import { TokenParser } from "../data/TokenParser";
 import { AuthenticationResponse, AuthenticationState, Claim, ClaimsPrincipal, ParsedTokenData } from "../data/types";
+import { IJwtTokenAuthenticationStateProvider } from "../interfaces/IJwtTokenAuthenticationStateProvider";
+import { IJwtTokenRefreshService } from "../interfaces/IJwtTokenRefreshService";
 import { IStorage } from "../interfaces/IStorage";
-import { JwtTokenRefreshService } from "./JwtTokenRefreshService"
+import { ITokenizedApiCommunicationService } from "../interfaces/ITokenizedApiCommunicationService";
 import { ServiceStore } from "./ServiceStore";
-import { TokenizedApiCommunicationService } from "./TokenizedApiCommunicationService";
 
-export class JwtTokenAuthenticationStateProvider {
+export class JwtTokenAuthenticationStateProvider implements IJwtTokenAuthenticationStateProvider {
 
-    private static _refreshService: JwtTokenRefreshService = null;
+    private static _refreshService: IJwtTokenRefreshService = null;
 
     private readonly _storageService: IStorage;
-    private readonly _apiService: TokenizedApiCommunicationService;
+    private readonly _apiService: ITokenizedApiCommunicationService;
     private _firstPassSignal: boolean = true;
 
     public readonly PARSED_TOKEN_STORAGE_KEY: string = "__parsedToken";
@@ -23,7 +24,7 @@ export class JwtTokenAuthenticationStateProvider {
     public readonly authenticationStateChanged: GenericEvent<AuthenticationStateChangedEventArgs> = new GenericEvent<AuthenticationStateChangedEventArgs>();
 
     constructor(storage: IStorage,
-        apiService: TokenizedApiCommunicationService) {
+        apiService: ITokenizedApiCommunicationService) {
         if (storage === null) throw new ArgumentNullException("storage");
         if (apiService === null) throw new ArgumentNullException("apiService");
         this._storageService = storage;

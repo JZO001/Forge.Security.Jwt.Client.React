@@ -1,8 +1,8 @@
 import { Dictionary } from "jzo-library";
 import { ParsedTokenData } from "../data/types";
-import { IStorage } from "../interfaces/IStorage";
+import { IMemoryStorage } from "../interfaces/IMemoryStorage";
 
-export class MemoryStorage implements IStorage {
+export class MemoryStorage implements IMemoryStorage {
 
     private _dictionary: Dictionary<string, string> = new Dictionary<string, string>();
 
